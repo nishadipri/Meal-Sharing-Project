@@ -8,7 +8,7 @@ function ReservationForm({ id }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      fetch("http://localhost:4000/api/reservations", {
+      fetch("/api/reservations", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

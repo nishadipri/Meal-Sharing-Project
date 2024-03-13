@@ -16,7 +16,7 @@ function MealDetails() {
 
   const fetchMeal = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/api/meals/${id}`);
+      const response = await fetch(`/api/meals/${id}`);
       const data = await response.json();
       setMeal(data);
     } catch (error) {

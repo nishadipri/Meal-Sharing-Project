@@ -25,7 +25,7 @@ function ReviewForm({ id }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      fetch("http://localhost:4000/api/review", {
+      fetch("/api/review", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
