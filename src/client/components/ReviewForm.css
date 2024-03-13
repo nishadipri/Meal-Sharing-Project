@@ -1,0 +1,12 @@
+.rating-button{
+    background-color: #085B96;
+    
+}
+
+.rating-button:hover{
+    background-color: #6497B1;
+}
+
+.rating-button::marker{
+    color: white;
+}

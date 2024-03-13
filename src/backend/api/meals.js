@@ -14,17 +14,31 @@ const knex = require("../database");
 
 router.get("/", async (request, response) => {
   try {
-    const mealWithDescription = await knex("meal")
-      .leftJoin("Review", "meal.id", "Review.meal_id")
-      .select(
-        "meal.id",
-        "meal.title",
-        "meal.location",
-        "meal.price",
-        "Review.description"
-      );
+    // const mealWithDescription = await knex("meal")
+    //   .select(
+    //     "meal.id",
+    //     "meal.title",
+    //     "meal.location",
+    //     "meal.price",
+    //     "Review.description"
+    //   );
 
-    response.json(mealWithDescription);
+    const meals = await knex.raw(`
+    select 
+      meal.id, 
+      meal.title, 
+      meal.location, 
+      meal.price,
+      COUNT(review.id) as numOfReviews,
+      SUM(review.stars) / COUNT(review.id) as rating
+from meal as meal
+left join \`Review\` as review on meal.id = review.meal_id
+GROUP BY meal.id
+    `);
+
+    console.log("meals", meals);
+
+    response.json(meals[0]);
   } catch (error) {
     console.log("error", error);
   }

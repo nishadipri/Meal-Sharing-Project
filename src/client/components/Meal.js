@@ -10,6 +10,8 @@ const Meal = ({ meal }) => {
       <p>Description: {meal.description}</p>
       <p>Price: ${meal.price}</p>
       <p>Location: {meal.location}</p>
+      <p>Reviews: {meal.numOfReviews}</p>
+      <p>Rating: {meal.rating ? Number(meal.rating) : 0}</p>
     </div>
   );
 };

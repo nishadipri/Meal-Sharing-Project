@@ -36,12 +36,31 @@ function MealList() {
       const linkToBookingPage = `/meals/${meal.id}`;
 
       return (
-        <Col key={meal.id}>
+        <Col key={meal.id} style={{ alignItems: "center" }}>
           <Card style={{ width: "18rem" }}>
             <Card.Body style={{ backgroundColor: "#BDC1D1" }}>
               <div>
                 <Meal meal={meal} />
-                <Link to={linkToBookingPage}>Make a booking</Link>
+                <button
+                  style={{
+                    backgroundColor: "#085B96",
+                    borderRadius: "10px",
+                    padding: "10px",
+                    alignContent: "center",
+                    margin: "18px 40px",
+                  }}
+                >
+                  <Link
+                    style={{
+                      color: "white",
+                      padding: "10px",
+                      textDecoration: "none",
+                    }}
+                    to={linkToBookingPage}
+                  >
+                    Make a booking
+                  </Link>
+                </button>
               </div>
             </Card.Body>
           </Card>
@@ -51,12 +70,25 @@ function MealList() {
   };
 
   return (
-    <Container fluid>
+    <Container fluid style={{}}>
       <Row>
         <RenderMeals />
       </Row>
-
-      <Link to="/meals">View All</Link>
+      <button
+        style={{
+          backgroundColor: "#085B96",
+          borderRadius: "10px",
+          padding: "10px",
+          margin: "18px 40px",
+        }}
+      >
+        <Link
+          style={{ color: "white", padding: "10px", textDecoration: "none" }}
+          to="/meals"
+        >
+          View All
+        </Link>
+      </button>
     </Container>
   );
 }

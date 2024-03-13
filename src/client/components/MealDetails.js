@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import Meal from "./Meal";
 import { useEffect, useState } from "react";
 import ReservationForm from "./ReservationForm";
+import ReviewForm from "./ReviewForm";
+import "./MealDetails.css";
 
 function MealDetails() {
   const { id } = useParams();
@@ -24,21 +26,25 @@ function MealDetails() {
 
   return (
     <div className="meal-details">
-      {/* <Meal /> */}
-      This is meal details
+      <h3>Meal details</h3>
       {meal ? (
         <div>
-          <h2>{meal.title}</h2>
+          <h4>{meal.title}</h4>
           <p>{meal.description}</p>
           <p>Price: {meal.price}</p>
           <p>Location: {meal.location}</p>
           {meal.totalReservations < meal.max_reservations && (
             <ReservationForm id={id} />
           )}
+          {meal.totalReservations >= meal.max_reservations && (
+            <p>This meal is fully booked</p>
+          )}
         </div>
       ) : (
         <p>Loading meal details...</p>
       )}
+      <h3>Add a review</h3>
+      <ReviewForm id={id} />
     </div>
   );
 }

@@ -1,0 +1,17 @@
+.meal-details
+{ display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    font-size: 18px;
+    font-weight: bold;
+    
+    }
+
+   .meal-details h3{
+        color: #6497B1;
+        font-weight: bold;
+    }

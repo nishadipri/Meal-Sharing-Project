@@ -31,7 +31,18 @@ function ReservationForm({ id }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      style={{
+        border: "1px solid black",
+        padding: "10px",
+        borderRadius: "10px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "start",
+        justifyContent: "center",
+      }}
+      onSubmit={handleSubmit}
+    >
       <div>
         <label>Name:</label>
         <input
@@ -57,7 +68,17 @@ function ReservationForm({ id }) {
         />
       </div>
 
-      <button type="submit">Reserve</button>
+      <button
+        style={{
+          backgroundColor: "#085B96",
+          borderRadius: "10px",
+          padding: "10px",
+          margin: "18px 40px",
+        }}
+        type="submit"
+      >
+        Reserve
+      </button>
     </form>
   );
 }
