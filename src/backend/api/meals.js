@@ -29,16 +29,16 @@ router.get("/", async (request, response) => {
       meal.title, 
       meal.location, 
       meal.price,
-      COUNT(review.id) as numOfReviews,
+      COUNT(review.id) as "numOfReviews",
       SUM(review.stars) / COUNT(review.id) as rating
 from meal as meal
-left join \`Review\` as review on meal.id = review.meal_id
+left join "Review" as review on meal.id = review.meal_id
 GROUP BY meal.id
     `);
 
     console.log("meals", meals);
 
-    response.json(meals[0]);
+    response.json(meals.rows);
   } catch (error) {
     console.log("error", error);
   }
@@ -55,14 +55,14 @@ router.get("/:id", async (request, response) => {
       meal.location, 
       meal.price,
       meal.max_reservations,
-      count(Reservation.id) as totalReservations
+      count("Reservation".id) as "totalReservations"
     FROM meal
-    LEFT JOIN \`Reservation\` ON meal.id = \`Reservation\`.meal_id
+    LEFT JOIN "Reservation" ON meal.id = "Reservation".meal_id
     WHERE meal.id = ${id}
     GROUP BY meal.id
     `);
 
-    const meal = queryResults[0][0];
+    const meal = queryResults.rows[0];
 
     if (!meal) {
       return response.status(404).json({ error: "Meal not found" });
