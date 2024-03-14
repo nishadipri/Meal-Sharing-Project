@@ -36,7 +36,7 @@ This is the individual project in the Hack Your Future CPH course.
 
 ## Video
 
-[![Alt text for your video](https://cdn.loom.com/sessions/thumbnail/your-video-thumbnail-url.jpg)](https://www.loom.com/share/your-video-shareable-url)
+[![Alt text for your video](https://www.loom.com/share/ca828d4f1bdf40f7bbc549795322714f?sid=9b77ede9-1505-4a24-8811-7fa1bbc2caac)]
 
 
 
