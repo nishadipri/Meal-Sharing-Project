@@ -36,7 +36,10 @@ This is the individual project in the Hack Your Future CPH course.
 
 ## Video
 
-`<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/ca828d4f1bdf40f7bbc549795322714f?sid=7888d929-cfec-488d-aed8-dc72a6f5b69d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>`
+(https://www.loom.com/share/ca828d4f1bdf40f7bbc549795322714f?sid=fecd5435-359e-40f8-8c99-5eac07fb5ecf)
+
+
+
 
 
 
