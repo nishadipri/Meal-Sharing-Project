@@ -29,8 +29,9 @@ This is the individual project in the Hack Your Future CPH course.
 
 ## Screenshots
 
-![](./assets/images/screenshotTwo.png)
-![](./assets/images/screenshotOne.png)
+![](./src/client/assets/images/screenshootTwo.png)
+![](./src/client/assets/images/screenshootOne.png)
+
 
 ## Video
 
