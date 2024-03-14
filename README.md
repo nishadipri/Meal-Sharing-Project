@@ -30,12 +30,13 @@ This is the individual project in the Hack Your Future CPH course.
 ## Screenshots
 
 ![](./src/client/assets/images/screenshootTwo.png)
+
 ![](./src/client/assets/images/screenshootOne.png)
 
 
 ## Video
 
-![video](./video.mp4)
+![video](https://www.loom.com/share/ca828d4f1bdf40f7bbc549795322714f?sid=4ab33c8d-07ae-4b4e-b699-661dee24ffd2)
 
 
 
