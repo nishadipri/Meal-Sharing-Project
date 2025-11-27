@@ -1,17 +1,39 @@
 {
   "name": "meal-sharing",
   "version": "1.0.0",
-  "description": "Website for sharing meals",
+  "description": "A community-driven full-stack web application for sharing and discovering delicious meals. Built with React, Express.js, and PostgreSQL.",
   "engines": {
-    "node": "8.11.1"
+    "node": "24.x"
   },
   "scripts": {
     "build": "webpack --mode production",
     "start": "npm run build && node ./src/backend/server",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon ./src/backend/server",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "lint": "eslint src/ --ext .js,.jsx",
+    "lint:fix": "eslint src/ --ext .js,.jsx --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,css,json}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,css,json}\""
   },
+  "keywords": [
+    "meal-sharing",
+    "food",
+    "community",
+    "react",
+    "express",
+    "postgresql",
+    "full-stack",
+    "nodejs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nishadipri/Meal-Sharing-Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nishadipri/Meal-Sharing-Project/issues"
+  },
+  "homepage": "https://meal-sharing-project.onrender.com",
   "author": "Benjamin Hughes",
   "license": "MIT",
   "proxy": "http://localhost:5000",
